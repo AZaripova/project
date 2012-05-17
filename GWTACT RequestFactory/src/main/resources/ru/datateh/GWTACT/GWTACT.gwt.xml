@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='GWTACT'>
+  <!-- Inherit the core Web Toolkit stuff.                        -->
+    <inherits name='com.google.gwt.user.User' />
+
+  <!--    ACTIVITY AND PLACE (History)-->
+    <inherits name="com.google.gwt.activity.Activity"/>
+    <inherits name="com.google.gwt.place.Place"/>
+
+  <!--    REQUEST FACTORY-->
+    <inherits name='com.google.web.bindery.requestfactory.RequestFactory'/>
+
+  
+  <!--  GIN-->
+    <inherits name='com.google.gwt.inject.Inject'/>
+    
+    <!-- GWT Editor-->
+    <inherits name="com.google.gwt.editor.Editor" />
+  
+  <!-- Inherit the default GWT style sheet.  You can change       -->
+  <!-- the theme of your GWT application by uncommenting          -->
+  <!-- any one of the following lines.                            -->
+    <inherits name='com.google.gwt.user.theme.standard.Standard' />
+  <!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
+  <!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/>     -->
+
+  <!-- Other module inherits                                      -->
+
+  <!-- Specify the app entry point class.                         -->
+    <entry-point class='ru.datateh.GWTACT.client.GWTACTEntryPoint' />
+
+  <!-- Specify the paths for translatable code                    -->
+    <source path='client' />
+    <source path='shared' />
+
+</module>

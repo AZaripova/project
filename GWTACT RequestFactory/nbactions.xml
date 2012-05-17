@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-GWT RUN</actionName>
+            <displayName>GWT RUN</displayName>
+            <goals>
+                <goal>gwt:run</goal>
+            </goals>
+        </action>
+    </actions>

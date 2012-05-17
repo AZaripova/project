@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>springGwtRemoteServiceServlet</servlet-name>
+        <servlet-class>org.spring4gwt.server.SpringGwtRemoteServiceServlet</servlet-class>
+    </servlet>
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>META-INF/applicationContext.xml</param-value>
+    </context-param>
+    
+    <!--    REQUESTFACTORY FOR SPRING-->
+    <servlet>
+        <servlet-name>requestFactoryServlet</servlet-name>
+        <servlet-class>org.spring4gwt.server.SpringGwtRemoteServiceServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>springGwtRemoteServiceServlet</servlet-name>
+        <url-pattern>/GWTACT/springGwtServices/*</url-pattern>
+    </servlet-mapping>
+
+  <!-- Servlets -->
+    <servlet>
+        <servlet-name>gwtRequest</servlet-name>
+        <servlet-class>com.google.web.bindery.requestfactory.server.RequestFactoryServlet</servlet-class>
+    </servlet>
+  
+    <servlet-mapping>
+        <servlet-name>gwtRequest</servlet-name>
+        <url-pattern>/gwtRequest</url-pattern>
+    </servlet-mapping>
+
+  <!-- Default page to serve -->
+    <welcome-file-list>
+        <welcome-file>GWTACT.html</welcome-file>
+    </welcome-file-list>
+
+</web-app>

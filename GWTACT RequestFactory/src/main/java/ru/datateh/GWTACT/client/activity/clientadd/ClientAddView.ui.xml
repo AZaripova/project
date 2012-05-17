@@ -1,0 +1,67 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+             xmlns:p1="urn:import:com.google.gwt.user.datepicker.client"
+             xmlns:a="urn:import:ru.datateh.GWTACT.client.activity.clientadd"
+             xmlns:e='urn:import:com.google.gwt.editor.ui.client'>
+    <ui:style>
+        .important 
+        {
+        font-weight: bold;
+        }
+    </ui:style>
+    <g:HTMLPanel>
+        <g:VerticalPanel width="800px" height="300px">
+            <g:HorizontalPanel width="100%" height="50px">
+                <g:Cell width="100">
+                    <g:Label text="ID" width="100px"/>
+                </g:Cell>
+                <e:ValueBoxEditorDecorator ui:field="id" >
+                    <e:valuebox>
+                        <g:LongBox  width="100%" ui:field="idBox"/>
+                    </e:valuebox>
+                </e:ValueBoxEditorDecorator>
+            </g:HorizontalPanel>
+            <g:HorizontalPanel width="100%" height="50px">
+                <g:Cell width="100">
+                    <g:Label text="Имя" width="100px"/>
+                </g:Cell>
+                <e:ValueBoxEditorDecorator ui:field="fullName" >
+                    <e:valuebox>
+                        <g:TextBox width="100%"/>
+                    </e:valuebox>
+                </e:ValueBoxEditorDecorator>
+            </g:HorizontalPanel>
+            <g:HorizontalPanel width="100%" height="50px">
+                <g:Cell width="100">
+                    <g:Label text="ID Документа" width="100px"/>
+                </g:Cell>
+                <e:ValueBoxEditorDecorator ui:field="dockNumber" >
+                    <e:valuebox>
+                        <g:LongBox width="100%"/>
+                    </e:valuebox>
+                </e:ValueBoxEditorDecorator>
+            </g:HorizontalPanel>
+            <g:HorizontalPanel width="100%" height="50px">
+                <g:Cell width="100">
+                    <g:Label text="День рождения" width="100px"/>
+                </g:Cell>
+                <a:DataBoxView ui:field="birthDate" width="100%" />
+            </g:HorizontalPanel>
+            <g:HorizontalPanel width="100%" height="50px">
+                <g:Cell width="100">
+                    <g:Label text="Красноглазый" width="100px"/>
+                </g:Cell>
+                <a:RedEyeBoxView ui:field="redEye" width="200px"/>
+            </g:HorizontalPanel>
+            <g:HorizontalPanel width="100%" height="50px">
+                <g:Cell width="400" horizontalAlignment="ALIGN_CENTER">
+                    <g:Button styleName="{style.important}" text="ok" ui:field="okButton" />
+                </g:Cell>
+                <g:Cell width="400" horizontalAlignment="ALIGN_CENTER">
+                    <g:Button styleName="{style.important}" text="Отмена" ui:field="cancelButton"/>
+                </g:Cell>
+            </g:HorizontalPanel>
+        </g:VerticalPanel>
+    </g:HTMLPanel>
+</ui:UiBinder> 
