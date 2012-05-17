@@ -1,0 +1,58 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:e="urn:import:com.google.gwt.editor.ui.client"
+	xmlns:d="urn:import:com.google.gwt.user.datepicker.client"
+	xmlns:c="urn:import:ru.datateh.study.gwtp.client.ui"
+	>
+	<ui:style src="../common.css">
+	</ui:style>
+
+	<g:HTMLPanel width="100%">
+		<center>
+			<g:Grid ui:field="form">
+				<g:row>
+					<g:customCell>
+						<g:Label text="ФИО" width="120px"/>
+					</g:customCell>
+					<g:customCell>
+						<e:ValueBoxEditorDecorator ui:field="fullname" stylePrimaryName="{style.editField}">
+							<e:valuebox>
+								<g:TextBox textAlignment="ALIGN_LEFT" stylePrimaryName="{style.editField}" />
+							</e:valuebox>
+						</e:ValueBoxEditorDecorator>
+					</g:customCell>
+				</g:row>
+				<g:row>
+					<g:customCell>
+						<g:Label text="День рождения" width="120px"/>
+					</g:customCell>
+					<g:customCell>
+						<c:BirthdateEditor ui:field="birthdate" stylePrimaryName="{style.editField}" />
+					</g:customCell>
+				</g:row>
+				<g:row>
+					<g:customCell>
+						<g:Label text="Номер документа" width="120px"/>
+					</g:customCell>
+					<g:customCell>
+						<e:ValueBoxEditorDecorator ui:field="docNumber" stylePrimaryName="{style.editField}">
+							<e:valuebox>
+								<g:LongBox stylePrimaryName="{style.editField}"/>
+							</e:valuebox>
+						</e:ValueBoxEditorDecorator>
+					</g:customCell>
+				</g:row>
+				<g:row>
+					<g:customCell>
+						<g:Label text="Красноглазый" width="120px"/>
+					</g:customCell>
+					<g:customCell>
+						<c:RedEyeEditor ui:field="redEye" />
+					</g:customCell>
+				</g:row>
+			</g:Grid>
+			<g:Button ui:field="formButton" text="Добавить"/>
+		</center>
+	</g:HTMLPanel>
+</ui:UiBinder> 

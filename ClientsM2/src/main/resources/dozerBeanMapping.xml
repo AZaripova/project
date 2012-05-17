@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings	xmlns="http://dozer.sourceforge.net"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:schemaLocation="http://dozer.sourceforge.net
+			http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+	<mapping date-format="dd-MM-yyyy">
+		<class-a>ru.datateh.study.gwtp.server.model.Client</class-a>
+		<class-b>ru.datateh.study.gwtp.shared.dto.ClientDTO</class-b>
+	</mapping>
+</mappings>

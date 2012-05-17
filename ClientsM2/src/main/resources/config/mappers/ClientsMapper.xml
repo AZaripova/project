@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="ru.datateh.study.gwtp.server.mapper.ClientsMapper">
+	<insert id="addClient" parameterType="Client">
+		INSERT INTO
+			CLIENTS
+				(
+					BIRTHDATE,
+					DOCNUMBER,
+					FULLNAME,
+					REDEYE
+				)
+			VALUES
+				(
+					#{birthdate},
+					#{docNumber},
+					#{fullname},
+					#{redEye}
+				)
+	</insert>
+	
+	<delete id="deleteClient" parameterType="Client">
+		DELETE FROM CLIENTS WHERE ID = #{id}
+	</delete>
+	
+	<update id="updateClient" parameterType="Client">
+		UPDATE CLIENTS SET
+			BIRTHDATE	= #{birthdate},
+			DOCNUMBER	= #{docNumber},
+			FULLNAME	= #{fullname},
+			REDEYE		= #{redEye}
+		WHERE ID = #{id}
+	</update>
+	
+	<select id="getClients" resultType="Client">
+		SELECT *
+		FROM CLIENTS
+	</select>
+</mapper>
